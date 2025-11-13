@@ -12,4 +12,9 @@ If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
 """
 
 def diff(a, b):
-    pass
+    for num in b:
+        while num in a:
+            a.remove(num)
+    return a
+
+print(diff([1, 2, 2, 2, 3], [2]))
